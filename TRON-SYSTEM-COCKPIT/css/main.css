@@ -1,0 +1,278 @@
+:root {
+    --bg-color: #070b14;
+    --card-bg: #111827;
+    --card-border: rgba(0, 243, 255, 0.18);
+    --accent-cyan: #00f3ff;
+    --accent-blue: #0066ff;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --purple: #a855f7;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 12px 12px 85px 12px;
+}
+header {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 2px solid var(--accent-cyan);
+    margin-bottom: 14px;
+}
+h1 {
+    color: var(--accent-cyan);
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.35);
+}
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    margin-top: 4px;
+}
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    border: 1px solid var(--card-border);
+}
+h2 {
+    font-size: 1rem;
+    color: var(--accent-cyan);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.stat-box {
+    background: #0b1120;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.stat-value {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--accent-cyan);
+}
+.stat-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+.water-progress {
+    background: #1e293b;
+    border-radius: 8px;
+    height: 22px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 6px;
+    position: relative;
+}
+.water-bar {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+.water-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 2px #000;
+}
+.btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+.btn {
+    flex: 1;
+    background: var(--accent-blue);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.btn-outline {
+    background: #1e293b;
+    color: var(--text-muted);
+    flex: 0.45;
+}
+.btn-danger {
+    background: var(--danger);
+    color: #fff;
+}
+.btn-success {
+    background: var(--success);
+    color: #000;
+}
+.mode-switch {
+    background: var(--warning);
+    color: #000;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+.task-item, .shop-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 0.88rem;
+    line-height: 1.35;
+}
+.task-item:last-child, .shop-item:last-child {
+    border-bottom: none;
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    accent-color: var(--accent-cyan);
+    margin-right: 10px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.task-time {
+    font-weight: bold;
+    color: var(--accent-cyan);
+    display: inline-block;
+    min-width: 52px;
+    font-size: 0.82rem;
+}
+.checked-text {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+.day-header {
+    background: #1e293b;
+    color: var(--accent-cyan);
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.badge {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--purple);
+}
+.badge-green { background: var(--success); color: #000; }
+.badge-warn { background: var(--warning); color: #000; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0b1120;
+    border-top: 1px solid var(--card-border);
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 0;
+    z-index: 999;
+}
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+.nav-btn.active {
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+.nav-icon { font-size: 1.2rem; }
+.input-field {
+    width: 100%;
+    padding: 9px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background: #0b1120;
+    color: #fff;
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+}
+.alert-box {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid var(--danger);
+    color: #fca5a5;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    margin-top: 8px;
+    display: none;
+}
+.info-box {
+    background: rgba(0, 243, 255, 0.08);
+    border: 1px solid var(--card-border);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    margin-top: 8px;
+}
+.cat-title {
+    color: var(--warning);
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+@media print {
+    .bottom-nav { display: none; }
+    .tab-content { display: block !important; }
+    body { padding-bottom: 10px; background: #fff; color: #000; }
+}
