@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ROOTS & STEEL</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<link rel="manifest" href="manifest.json">
+<body>
+
+    <header>
+        <h1>ROOTS & STEEL</h1>
+        <div class="subtitle">Fettabbau, Muskelschutz (46,6 kg) & PiMZ-Leberschutz</div>
+    </header>
+
+    <!-- Die 5 Modul-Container (werden automatisch durch die Modul-Dateien befüllt) -->
+    <div id="tab-cockpit" class="tab-content active"></div>
+    <div id="tab-plan" class="tab-content"></div>
+    <div id="tab-rewe" class="tab-content"></div>
+    <div id="tab-scanner" class="tab-content"></div>
+    <div id="tab-stats" class="tab-content"></div>
+
+    <!-- Untere 5-Tab Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="switchTab('cockpit', this)">
+            <span class="nav-icon">⚡</span><span>Heute</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('plan', this)">
+            <span class="nav-icon">📅</span><span>Mo–So Plan</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('rewe', this)">
+            <span class="nav-icon">🛒</span><span>REWE</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('scanner', this)">
+            <span class="nav-icon">📸</span><span>Scanner</span>
+        </button>
+        <button class="nav-btn" onclick="switchTab('stats', this)">
+            <span class="nav-icon">📊</span><span>Werte</span>
+        </button>
+    </nav>
+
+    <!-- ORDNER 1: CORE -->
+    <script src="js/core.js"></script>
+    <!-- ORDNER 2–6: MODULE -->
+    <script src="modules/cockpit/cockpit.js"></script>
+    <script src="modules/plan/plan.js"></script>
+    <script src="modules/shop/shop.js"></script>
+    <script src="modules/recipes/recipes.js"></script>
+    <script src="modules/stats/stats.js"></script>
+</body>
+</html>
