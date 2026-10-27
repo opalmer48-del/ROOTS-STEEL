@@ -1,0 +1,17 @@
+{
+  "name": "ROOTS &amp;amp; STEEL",
+  "short_name": "ROOTS &amp;amp; STEEL",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "description": "Körper-Transformation, Muskelschutz &amp;amp; Tägliches System",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "de"
+}
